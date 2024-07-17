@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>インサイダーゲーム</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <div class="container">
+        <h1>役職確認</h1>
+        <body>
+            <div id="Text"></div>
+        </body>
+    </div>
+    <template id="check">
+        <p>あなたはplayer1ですか?</p>
+        <button onclick="check()">はい</button>
+    </template>
+    <template id="position">
+        <p>あなたは庶民です</p>
+        <button onclick="next()">OK</button>
+    </template>
+    <script src="/check.js" defer></script>
+</html>
