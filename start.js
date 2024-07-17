@@ -39,7 +39,7 @@ confirm_btn.onclick=function(){
     sessionStorage.setItem("player",JSON.stringify(players))
     sessionStorage.setItem("master_num",master_num);
     sessionStorage.setItem("insider_num",insider_num);
-    window.location.href = '/check.html';
+    window.location.href = './check.html';
 }
 
 function add(name=null){

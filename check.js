@@ -41,7 +41,7 @@ let num=0;
         function next(){
             num++;
             if(num>=Object.keys(player).length){
-                window.location.href = '/game.html';
+                window.location.href = './game.html';
             }else{
                 change_template();
                 document.querySelector("#Text").textContent=null;

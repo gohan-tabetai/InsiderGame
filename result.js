@@ -25,5 +25,5 @@ for(let i in player){
 }
 //sessionStorage.clear()
 function to_start(){
-    window.location.href = '/';
+    window.location.href = './';
 }

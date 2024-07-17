@@ -17,7 +17,7 @@ for(let i in player){
         newbtn.onclick=function(){
             if( confirm(`${player[this.value]}がインサイダーでよろしいでしょうか？`) ){
                 sessionStorage.setItem("result",this.value)
-                window.location.href = '/result.html';
+                window.location.href = './result.html';
             }
         }
         newdiv.querySelector("p").append(newbtn)
