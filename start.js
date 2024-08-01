@@ -3,7 +3,7 @@ const confirm_btn=document.querySelector("#confirm_btn")
 const add_btn=document.querySelector("#add_btn")
 const delete_btn=document.querySelector("#delete_btn")
 
-loadtheme();
+load_theme();
 
 let players={}
 if(players=JSON.parse(sessionStorage.getItem("player"))){
@@ -39,6 +39,10 @@ confirm_btn.onclick=function(){
     sessionStorage.setItem("player",JSON.stringify(players))
     sessionStorage.setItem("master_num",master_num);
     sessionStorage.setItem("insider_num",insider_num);
+    if(!sessionStorage.getItem("answer")){
+        console.log("よみこみ")
+        load_theme().then(window.location.href = './check.html')
+    }
     window.location.href = './check.html';
 }
 
@@ -62,7 +66,7 @@ function del(){
     playerlist.querySelectorAll("input")[player_num-1].remove()
 }
 
-async function loadtheme(){
+async function load_theme(){
     const response = await fetch('theme.json');
     if (response.ok) {
         const text = await (response.text());
